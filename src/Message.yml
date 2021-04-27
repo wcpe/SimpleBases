@@ -1,0 +1,94 @@
+Message:
+  reload: "&a重载完成~~耗时&e%ms%&aMs"
+  noPlayer: "&c你不是一位玩家！"
+  noEnable: "&c尚未开启该功能！"
+  noPermission: "&c你没有权限使用!"
+  playerOffline: "&c玩家未在线或不存在"
+  waitCooling: "&c请等待冷却时间结束!"
+  waitFinish: "&e%cmd%&c冷却完成!"
+  #%cmd%为指令名称
+  noBack: "&c无传送点可返回!"
+  backWrong: "&4使用错误 &a格式:/back &e返回上一次传送点"
+  CountDown: "&e%cmd%&c倒计时 &e%t%......"
+  #%t%为读秒
+  teleportFinish: "&a传送完成!"
+  clearDropMob: "&a清理了&e%drop%&a个掉落物,以及&e%mobs%&a个怪物"
+  #%drop%为掉落物 %mobs%为怪物
+  flySwitch: "&a飞行模式切换为 &e开;&a飞行模式切换为 &e关"
+  flyWrong: "&4使用错误 &a格式:/fly &e切换飞行模式"
+  gmSwitch: "&a佞的游戏模式已更改为&e生存;&a佞的游戏模式已更改为&e创造;&a佞的游戏模式已更改为&e冒险;&a佞的游戏模式已更改为&e观察者"
+  gmWrong: "&4使用错误 &a格式:/gm <0/1/2/3>&e切换游戏模式 生存/创造/冒险/观察者"
+  hatSwitch: "&a成功将手中物品戴到 &e脑壳&a上~"
+  hatNumber: "&4手中物品数量超过一个或者为空气~"
+  hatWrong: "&4使用错误 &a格式:/hat &e将手中物品戴到脑壳上~"
+  tpHomeFinish: "&a成功传送回到自己滴 %home% ~"
+  #%home%为设置的名字
+  noHome: "&c还没有设置家!"
+  homeNoExistence: "&e%home% &c不存在!"
+  tpHomeWrong: "&4使用错误 &a格式:/home <名称>&e传送回自己温馨滴小家~<前提你得设置过>"
+  setHomeFinish: "&a设置家 %home% 完成~~~"
+  #%home%为设置的名字
+  setHomeWrong: "&4使用错误 &a格式:/sethome <名称> &e设置一个 家~"
+  setHomeLimit: "&4已经达到设置家的上限 请删除一些或者直接sethome覆盖"
+  delHomeWrong: "&4使用错误 &a格式:/delhome <名称> &e删除一个 家~"
+  delHomeFinish: "&a删除 %home% 完成~~~"
+  playcmdWrong: "&4使用错误 &a格式:/playcmd <玩家名> /指令 第一个参数 第二个参数 ...... &e控制玩家执行指令 不加/即为聊天"
+  playerGameTimeCheck: "&a您当前剩余可兑换在线时间为:&e&l%time%"
+  #%time%为玩家剩余在线时间点
+  playerGameTimeWrong: "&4使用错误 &a格式:\n/pm &e查询剩余可兑换在线时间~\n/pm dh <兑换的在线时间>&e兑换在线时间奖励~"
+  playerGameTimeInsufficient: "&c输入错误,&a您当前剩余可兑换在线时间为:&e&l%time%"
+  #%time%为玩家剩余在线时间点
+  tpSpawnFinish: "&a成功传送回到主城~"
+  noSpawn: "&c还没有设置主城!"
+  tpSpawnWrong: "&4使用错误 &a格式:/spawn &e传送回主城~"
+  setSpawnFinish: "&a设置 主城 完成~~~"
+  setSpawnWrong: "&4使用错误 &a格式:/setspawn &e设置 主城 点~"
+  speedWrong: "&4使用错误 &a格式:/speed walk/fly -1~1 &e设置 移动/飞行 速度 <只能-1到1>~"
+  speedFinish: "&c您的移动速度已更改为&a%walk%;&c您的飞行速度已更改为&a%fly%"
+  #%walk%为移动速度 %fly%为飞行速度
+  zishaWrong: "&4使用错误 &a格式:/zisha &e自刎~"
+  tpaWrong: "&4使用错误 &a格式:/tpa <玩家> &e向玩家发起传送请求~"
+  tpahereWrong: "&4使用错误 &a格式:/tpahere <玩家> &e邀请玩家传送至你~"
+  tpacceptWrong: "&4使用错误 &a格式:/tpaccept &e接受传送请求~"
+  tpdenyWrong: "&4使用错误 &a格式:/tpdeny &e拒绝传送请求~"
+  tpaRequest: "&a玩家&e%player%&a给你发送了一条传送请求 想传送到你的位置\n&a输入&b/tpaccept 接受\n&a输入&c/tpdeny 拒绝"
+  tpaNoRequest: "&c暂无传送请求"
+  #%player%为玩家名称
+  tpaHereRequest: "&a玩家&e%player%&a给你发送了一条传送请求 想邀请你传送到他的位置\n&a输入&b/tpaccept 接受\n&a输入&c/tpdeny 拒绝"
+  #%player%为玩家名称
+  tpacceptButton: "&b接受请求"
+  tpdenyButton: "&c拒绝请求"
+  tpaFinish: "&a成功发送一条请求给玩家&e%player%"
+  tpAccept: "&a对方接受了你的传送请求~"
+  tpaAccept: "&a你&e接受&a了玩家%player%的传送请求~"
+  #%player%为玩家名称
+  tpDeny: "&a对方&c拒绝&a了你的传送请求~"
+  tpaDeny: "&a你&c拒绝&a了玩家%player%的传送请求~"
+  #%player%为玩家名称
+  warpExistence: "&a该坐标&e%warp%&a已存在~"
+  #%warp%为添加的坐标名称
+  warpNoExistence: "&c该坐标&e%warp%&a不存在~"
+  #%warp%为添加的坐标名称
+  addwarpFinish: "&a添加坐标&e%warp%&a成功~"
+  #%warp%为添加的坐标名称
+  delwarpFinish: "&c删除坐标&e%warp%&a成功~"
+  #%warp%为坐标名称
+  moveWarpFinish: "&a移动坐标&e%warp%&a至脚下成功~"
+  #%warp%为坐标名称
+  warpHelp: "&eWarp&b帮助\n&a/warp add <地标名> &c-添加所站位置为地标\n&a/warp del <地标名> &c-删除地标\n&a/warp move <地标名>&c-将地标移至脚下\n&a/warp tp <地标名> &c-进行传送\n&a/warp set <原地标名> <新地标名>&c-设置地标名\n&a/warp list &c-Warplayer列表"
+  tpWarpFinish: "&a成功传送......至&e%warp%&a~"
+  #%warp%为坐标名称
+  setWarpFinish: "&a成功将&e%warp%&a更改为&e%warp2%&a~"
+  #%warp%为更改前坐标名称 %warp2%为更改后的
+  onShield: "&a开启屏蔽@模式~"
+  offShield: "&a关闭屏蔽@模式~"
+  clearCountDown: "&c清理怪物倒计时 &e%t%......"
+  tpofflineWrong: "&4使用错误 &a格式:/tpoffline 玩家名 时间点<tab补全>~ &e传送至玩家退出服务器的地方"
+  tpNoExistence: "&4不存在该条记录 请确认存在"
+  tponlineWrong: "&4使用错误 &a格式:/tponline 玩家名 时间点<tab补全>~ &e传送至玩家进入服务器的地方"
+  tpofflineFinish: "&a传送到该玩家离线地点~"
+  tponlineFinish: "&a传送到该玩家上线地点~"
+  antichatRemove: "&a解除屏蔽玩家%player%&a成功"
+  antichatAdd: "&a屏蔽玩家%player%&a成功"
+  antichatList: "&a您屏蔽的玩家:&e%list%"
+  antichatHelp: "&a屏蔽帮助\n&e/antichat 玩家名 &a屏蔽玩家/解除屏蔽玩家\n&e/antichat list me &a查询你屏蔽的玩家"

@@ -1,0 +1,62 @@
+name: SimpleBases
+main: com.wcpe.SimpleBases.Main
+version: 1.2.0
+api-version: 1.13
+author: wcpe
+softdepend: [Vault, PlaceholderAPI, LuckPerms, HolographicDisplays]
+commands:
+  zisha:
+    aliases: [zisha,zs]
+  spawn:
+  setspawn:
+  back:
+  gm:
+  warp:
+  hat:
+  tpa:
+  tpahere:
+  tpaccept:
+  tpdeny:
+  tponline:
+  tpoffline:
+  loaddata:
+  cclear:
+  home:
+  sethome:
+  delhome:
+  phb:
+  zimiao:
+  tx:
+  speed:
+  fly:
+  playcmd:
+  pm:
+  gc:
+  pb:
+  antichat:
+    aliases: [antichat,ac]
+  sign:
+  SimpleBases:
+    aliases: [SimpleBases,sb]
+permissions:
+  SimpleBases.use:
+    description: "玩家默认权限"
+    default: true
+    children:
+      SimpleBases.ChatFormat.Default: true
+      SimpleBases.back: true
+      SimpleBases.spawn: true
+      SimpleBases.sethome: true
+      SimpleBases.home: true
+      SimpleBases.delhome: true
+      SimpleBases.tpa: true
+      SimpleBases.tpahere: true
+      SimpleBases.tpaccept: true
+      SimpleBases.tpdeny: true
+      SimpleBases.warp.tp: true
+      SimpleBases.hat: true
+      SimpleBases.pm: true
+      SimpleBases.sign: true
+      SimpleBases.pb: true
+      SimpleBases.zisha: true
+      SimpleBases.antichat: true

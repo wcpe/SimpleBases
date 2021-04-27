@@ -1,0 +1,315 @@
+ConfigVersion: 1.2
+#配置文件版本 请勿更改
+AtPlayer:
+  Enable: true
+  CheckAt: "@"
+  #检测头
+  CheckAtAll: "@all"
+  #检测@所有玩家 
+  AtAll: "&a你成功@所有玩家~"
+  #@所有人提示
+  Ated: "&a你被玩家&b&l%player%&a@了,&a快看看Ta有啥事吧！"
+  #被@的玩家收到的信息 %player%为@人的玩家
+  AtedTitle: "&a你被玩家&b&l%player%&a@了;&a快看看聊天栏吧！;10;70;20"
+  #被@的玩家收到的Title标题 %player%为@人的玩家
+  #格式: 主标题;副标题;淡入;淡出;持续时间
+  At: "&a你成功@玩家&b&l%player%~"
+  #@的玩家收到的信息 %player%为被@的玩家
+  AtTitle: "你成功@玩家;%player%;10;70;20"
+  #被@的玩家收到的Title标题  %player%为被@的玩家
+  #格式: 主标题;副标题;淡入;淡出;持续时间 
+  ShieldOpen: "&a对方已开启屏蔽模式~"
+  #被@的玩家开启屏蔽 回复的消息
+AntiSpawnWorld:
+  Enable: true
+  Worlds:
+  - "world;200"
+  #哪个世界出生点周围禁止生成怪物 世界名称;半径
+Menu:
+  Enable: false
+  Type: "BOOK"
+  Name: "§a菜单"
+  Slot: 8
+  Lore:
+    - '§7一本没有任何作用的书~~'
+#菜单绑定物品栏
+Sign:
+  Enable: true
+  Title: "&a签到界面"
+  BeforeSignType: "stone" 
+  BeforeSignLore:
+  - "&c&l未签到"
+  AfterSignType: "dirt" 
+  AfterSignLore:
+  - "&a&l已签到"
+  oldSignType: "glass" 
+  oldSignLore:
+  - '&4&l已过期'
+  dataFormat: "%y%/%m%/%d%"
+  #名字格式
+  RightDownTipName: "&a小提示"
+  RightDownTipType: "stick"
+  RightDownTipLore:
+  - '&aThis is Tip'
+  #右下角提示的设置
+  DailyReward:
+  - '[CMD]say %player% 你成功签到~'
+  #每日签到执行的指令
+  #- '[CMD]后台执行的指令]'  此处玩家变量为"%player%
+
+  #- '[TITLE]%server_tps%]SubTitle]10]70]20'
+  #- '[TITLE]主标题]副标题]淡入时间]停留时间]淡出时间'
+
+  #- '[CHAT]我进来了啦啦啦'
+  #- '[CHAT]玩家发送的指令' #加/就是指令 不加就是消息
+
+  #- '[ACTION]§a2333%player_name%'
+  #- '[ACTION]发送的消息'
+
+  #- '[OP]/say test'
+  #- '[OP]/指令 让所有在线玩家使用op权限执行此条指令'
+
+  #- '233333'
+  #- '233333 直接发送此段文字给玩家'
+
+  #- '[Bd]233]'
+  #- '[Bd]服务器内广播消息'
+
+  #加/就是指令 不加就是发送文字
+  #注意[]后不能加空格
+  #支持Papi
+Clear:
+  Enable: true
+  ClearDropNumber: 500
+  #掉落物阈值
+  ClearMobsNumber: 1000
+  #怪物阈值
+  ClearCountDown: 60
+  ClearCooling: 600
+  #清理倒计时
+  ClearList:
+  - 'ZOMBIE'
+  - 'SKELETON'
+  - 'CREEPER'
+  - 'ENDERMAN'
+  - 'PIG_ZOMBIE'
+  #怪物列表
+ChatFormat:
+  Enable: true
+  CoolFinishTipEnable: true
+  #是否开启冷却完成提示
+  Chat:
+    Default:
+      Permission: "SimpleBases.ChatFormat.Default"
+      Format: "[pb][player][chat]"
+      #聊天配置 用下面的Format
+      ChatLength: 10
+      #长度
+      ChatLengthMessage: "§c聊天长度过长"
+      ChatCool: 2
+      #秒
+      ChatCoolMessage: "§c聊天冷却中....."
+      #冷却中信息
+      Weight: 0
+      #权重
+      ReplaceAll:
+      - '傻逼;**'
+      #屏蔽的词(可正则)
+      IgnoreCool: false
+      #是否忽视聊天冷却
+      IgnoreLength: false
+      #是否忽视聊天长度
+      IgnoreReplaceAll: false
+      #是否忽视聊天替换词
+    Vip:
+      Permission: "SimpleBases.ChatFormat.Vip"
+      #权限
+      Format: "[vip][pb][player][chat]"
+      #聊天配置 用下面的Format
+      ChatLength: 10
+      #长度
+      ChatLengthMessage: "§c聊天长度过长"
+      ChatCool: 2
+      #秒
+      ChatCoolMessage: "§c聊天冷却中....."
+      #冷却中信息
+      Weight: 0
+      #权重
+      ReplaceAll:
+      - '傻逼;**'
+      #屏蔽的词(可正则)
+      IgnoreCool: true
+      #是否忽视聊天冷却
+      IgnoreLength: false
+      #是否忽视聊天长度
+      IgnoreReplaceAll: false
+      #是否忽视聊天替换词
+    Admin:
+      Permission: "SimpleBases.ChatFormat.Admin"
+      #权限
+      Format: "[admin][pb][player][chat]"
+      #聊天配置 用下面的Format
+      ChatLength: 10
+      #长度
+      ChatLengthMessage: "§c聊天长度过长"
+      ChatCool: 2
+      #秒
+      ChatCoolMessage: "§c聊天冷却中....."
+      #冷却中信息
+      Weight: 1
+      #权重
+      ReplaceAll:
+      - '傻逼;**'
+      #屏蔽的词(可正则);替换的词
+      IgnoreCool: true
+      #是否忽视聊天冷却
+      IgnoreLength: true
+      #是否忽视聊天长度
+      IgnoreReplaceAll: true
+      #是否忽视聊天替换词
+  Format:
+    vip:
+      Message: §a[§6Vip§a]
+      Command: /pb %player%
+      List: §a该玩家是§6Vip
+    admin:
+      Message: §a[§cAdmin§a]
+      Command: /pb %player%
+      List: §a该玩家是§c管理员
+    pb:
+      Message: "§a[屏蔽§a]"
+      Command: "/ac %player%"
+      List: "§a点击 屏蔽/解除屏蔽 %player%"
+    player:
+      Message: "§a< §e%player% §a>"
+      Command: "/pb %player%"
+      List: "§a玩家%player%"
+    chat:
+      Message: "§r>>>%chat%"
+      Command: "/pb %player%"
+      List: "§a这是%player%说的话"
+    #Message Command可用变量%player% %chat% 
+CheckVersion:
+  Enable: true
+  Time: 86400
+  #秒为单位
+
+FirstJoinCommands:
+  Enable: true
+  Commands:
+  - '[CMD]say 1'
+  #- '[CMD]后台执行的指令]'  此处玩家变量为"%player%
+  #- '[TITLE]%server_tps%]SubTitle]10]70]20'
+  #- '[TITLE]主标题]副标题]淡入时间]停留时间]淡出时间'
+  #- '[CHAT]我进来了啦啦啦'
+  #- '[CHAT]玩家发送的指令' #加/就是指令 不加就是消息
+  #- '[ACTION]§a2333%player_name%'
+  #- '[ACTION]发送的消息'
+  #- '[OP]/say test'
+  #- '[OP]/指令 让所有在线玩家使用op权限执行此条指令'
+  #- '233333'
+  #- '233333 直接发送此段文字给玩家'
+  #- '[Bd]233]'
+  #- '[Bd]服务器内广播消息'
+  #加/就是指令 不加就是发送文字
+  #注意[]后不能加空格
+  #支持Papi
+JoinSendMessage:
+  Title:
+    Enable: true
+    main: '§a欢迎来到'
+    sub: '§b这个服务器'
+    fadein: 20
+    fadeout: 20
+    stay: 60
+  Message:
+    Enable: true
+    Send:
+      - ''
+      - ''
+      - ''
+      - '          §a欢迎来到§d我的世界§a服务器'
+      - ''
+      - ''
+      - ''
+      - ''
+      - ''
+  Actionbar:
+    Enable: true
+    Send: "§a欢迎来到§b这个服务器"
+    #加入发送消息配置
+    #加入发送消息配置
+
+JoinQuitMessage:
+  Enable: true
+  OpJoin: "§7[§a+§7]§8%player%"
+  NoOpJoin: "§7[§a+§7]§8%player%"
+  OpQuit: "§7[§c-§7]§8%player%"
+  NoOpQuit: "§7[§c-§7]§8%player%"
+  #加入退出消息 %player% 玩家变量名
+  
+PlayerGameTime:
+  Enable: true
+  Type: 'M'
+  #D或H或M或S
+  #天 时 分 秒
+  #例:如果为s就是一秒加一点 h就是一小时加一点
+  #此处 %player% 玩家变量 
+  #     %pmdh% 兑换的在线时间
+  #     %pmsy% 剩余在线时间
+  #Ps:变量为以下Command Messag适用
+  Command:
+  - 'give %player% minecraft:stone <%pmdh%>'
+  Message:
+  - '名字:%player% '
+  - '兑换的在线时间:%pmdh% '
+  - '剩余在线时间:%pmsy% '
+  #注意command里面 值可<1+1*5> 必须打上尖括号
+Tpa:
+  Enable: true
+  CountDown: 5
+  #等待传送的倒计时
+  Cooling: 60
+  #冷却时间
+Back:
+  Enable: true
+  CountDown: 5
+  #等待传送的倒计时
+  Cooling: 60
+  #冷却时间
+Spawn:
+  Enable: true
+  CountDown: 5
+  #等待传送的倒计时
+  Cooling: 60
+  #冷却时间
+Home:
+  Enable: true
+  Number: 3
+  #默认几个家
+  CountDown: 5
+  #等待传送的倒计时
+  Cooling: 60
+  #冷却时间
+Gamemode:
+  Enable: true
+Warp:
+  Enable: true
+Fly:
+  Enable: true
+Gc:
+  Enable: true
+Hat:
+  Enable: true
+Playcmd:
+  Enable: true
+Speed:
+  Enable: true
+Tponline:
+  Enable: true
+Tpoffline:
+  Enable: true
+Zisha:
+  Enable: true
+
+
