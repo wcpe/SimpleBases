@@ -1,5 +1,74 @@
-ConfigVersion: 1.2
-#配置文件版本 请勿更改
+CommandEnable:
+  gc: true
+  fly: true
+  speed: true
+  gm: true
+  suicide: true
+  hat: true
+  setspawn: true
+  spawn: true
+  back: true
+  tpa: true
+  tponline: true
+Setting:
+  tponline:
+    inventory:
+      title: "§6%player% §a玩家上线记录 - §8#§9%page%"
+      name: "§e%time%"
+      lore:
+      - '§a距离该时间点过去: §6%toTime%'
+      - '§e左键§a或§e右键 §a单击传送至该记录点'
+      - '§eSHIFT §a+ §e左键§a或§e右键 §a删除该记录'
+  playerFirstJoin:
+    enable: true
+    broadcastMessage: "§a欢迎新玩家 §e%player% §a加入了服务器！"
+  joinQuitMessage:
+    joinMessage:
+       enable: true
+       default: "§7[§a+§7]§8%player%"
+       permissionMessage:
+        "SimpleBases.joinMessage.one": "§7[§a+§7]§8%player%"
+        "SimpleBases.joinMessage.two": "§7[§a+§7]§8%player%"
+        "SimpleBases.joinMessage.three": "§7[§a+§7]§8%player%"
+    quitMessage:
+       enable: true
+       default: "§7[§a-§7]§8%player%"
+       permissionMessage:
+        "SimpleBases.quitMessage.one": "§7[§c-§7]§8%player%"
+        "SimpleBases.quitMessage.two": "§7[§c-§7]§8%player%"
+        "SimpleBases.quitMessage.three": "§7[§c-§7]§8%player%"
+  joinServerSendPlayerMessage:
+    sendMessage:
+      enable: true
+      message:
+      - ''
+      - ''
+      - ''
+      - '          §a欢迎来到§d我的世界§a服务器'
+      - ''
+      - ''
+      - ''
+      - ''
+      - ''
+    sendActionbar:
+      enable: true    
+      message: " §a欢迎来到§d我的世界§a服务器 "
+    sendTitle:
+      enable: true
+      mainMessage: "§a欢迎来到"
+      subMessage: "§d我的世界§a服务器"
+      fadein: 20
+      fadeout: 20
+      stay: 60
+  serverSpawn:
+    countDownTime: 3
+    coolTime: 10
+  back:
+    countDownTime: 3
+    coolTime: 10
+  hat:
+    disItem:
+    - 'STONE'
 AtPlayer:
   Enable: true
   CheckAt: "@"
