@@ -21,7 +21,8 @@ Setting:
       - '§eSHIFT §a+ §e左键§a或§e右键 §a删除该记录'
   playerFirstJoin:
     enable: true
-    broadcastMessage: "§a欢迎新玩家 §e%player% §a加入了服务器！"
+    stringAction:
+    - '[BD]§a欢迎新玩家 §e%player% §a加入了服务器！'
   joinQuitMessage:
     joinMessage:
        enable: true

@@ -24,12 +24,10 @@ import top.wcpe.simplebases.playerdata.filedata.PlayerDataFileDataImpl;
  * @date 2021年5月8日 下午2:11:05
  */
 public class SimpleBasesFileDataManagerImpl implements SimpleBasesDataManager {
-	private final SimpleBases instance;
 	private final Path playerDataDirPath;
 	private final Path serverDataDirPath;
 
 	public SimpleBasesFileDataManagerImpl(SimpleBases instance) {
-		this.instance = instance;
 		Path path = instance.getDataFolder().toPath();
 		Path playerdataDir = path.resolve("playerdata");
 		if (!Files.exists(playerdataDir)) {

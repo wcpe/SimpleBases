@@ -1,6 +1,5 @@
 package top.wcpe.simplebases;
 
-import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -10,7 +9,8 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.player.PlayerTeleportEvent;
 
 import top.wcpe.simplebases.playerdata.PlayerData;
-import top.wcpe.wcpelib.bukkit.utils.NmsUtil;
+import top.wcpe.wcpelib.bukkit.utils.NetMinecraftServerUtil;
+import top.wcpe.wcpelib.bukkit.utils.StringActionUtil;
 import top.wcpe.wcpelib.common.utils.string.StringUtil;
 
 /**
@@ -28,6 +28,13 @@ public class SimpleBasesBasicFunctions implements Listener {
 		instance.getServer().getPluginManager().registerEvents(this, instance);
 	}
 
+	/**
+	 * 玩家首次加入游戏功能
+	 * 
+	 * @param e
+	 * @author WCPE
+	 * @date 2021年5月20日 下午4:27:00
+	 */
 	@EventHandler(priority = EventPriority.LOW)
 	public void playerfirstJoin(PlayerJoinEvent e) {
 		if (SimpleBases.getSimpleBasesDataManager().existPlayerData(e.getPlayer().getName())) {
@@ -36,8 +43,7 @@ public class SimpleBasesBasicFunctions implements Listener {
 		SimpleBases.getSimpleBasesDataManager().createPlayerData(e.getPlayer().getName());
 		ConfigurationSection setting = instance.getSetting("playerFirstJoin");
 		if (setting.getBoolean("enable")) {
-			Bukkit.broadcastMessage(StringUtil.replaceString(setting.getString("broadcastMessage"),
-					"player:" + e.getPlayer().getName()));
+			StringActionUtil.executionCommands(setting.getStringList("stringAction"), false, e.getPlayer());
 		}
 	}
 
@@ -148,7 +154,7 @@ public class SimpleBasesBasicFunctions implements Listener {
 			}
 		}
 		if (setting.getBoolean(StringUtil.joining(".", "sendActionbar", "enable"))) {
-			NmsUtil.sendAction(e.getPlayer(),
+			NetMinecraftServerUtil.sendAction(e.getPlayer(),
 					StringUtil.replaceString(setting.getString(StringUtil.joining(".", "sendActionbar", "message")),
 							"player:" + e.getPlayer().getName()));
 		}

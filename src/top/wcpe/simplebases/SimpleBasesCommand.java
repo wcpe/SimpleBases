@@ -51,7 +51,7 @@ import top.wcpe.wcpelib.bukkit.inventory.InventoryPlus;
 import top.wcpe.wcpelib.bukkit.inventory.InventoryPlus.Builder;
 import top.wcpe.wcpelib.bukkit.inventory.entity.Slot;
 import top.wcpe.wcpelib.bukkit.itemstack.SkullManager;
-import top.wcpe.wcpelib.bukkit.utils.NmsUtil;
+import top.wcpe.wcpelib.bukkit.utils.NetMinecraftServerUtil;
 import top.wcpe.wcpelib.common.utils.collector.ListUtil;
 import top.wcpe.wcpelib.common.utils.datatime.OtherUtil;
 import top.wcpe.wcpelib.common.utils.datatime.TimeUtil;
@@ -528,7 +528,7 @@ public class SimpleBasesCommand {
 			sender.sendMessage("§a运行时间: §e" + Utils
 					.formatDate(System.currentTimeMillis() - ManagementFactory.getRuntimeMXBean().getStartTime()));
 			try {
-				Class<?> nmsClass = NmsUtil.getNmsClass("MinecraftServer");
+				Class<?> nmsClass = NetMinecraftServerUtil.getNmsClass("MinecraftServer");
 
 				Field recentTps = nmsClass.getDeclaredField("recentTps");
 				recentTps.setAccessible(true);
